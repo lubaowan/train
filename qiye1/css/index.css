@@ -1,0 +1,82 @@
+.service{
+    text-align: center;
+    width: 1200px;
+    margin: 0 auto;
+}
+.aside{
+    position: fixed;
+    top: 200px;
+    right: 10px;
+    list-style: none;
+    z-index: 999;
+    display: none;
+     border-radius: 15px;
+}
+.aside li{
+    border: 1px solid #eee;
+    padding: 5px;
+    background-color: rgb(159, 214, 236);
+    border-radius: 10px;
+}
+.aside a{
+    display: block;
+    font-size: 20px;
+    transition: all 1s;
+}
+.service p:hover{
+    color: blue;
+    cursor: pointer;
+}
+.service-content{
+    background-color: skyblue;
+    height: 300px;
+    font-size: 30px;
+}
+.service-content ul{
+     
+     display: flex;
+     height: 300px;
+     align-items: center;
+     list-style: none;
+    
+}
+.service-content li{
+    flex: 1;
+}
+
+/* introduction */
+.introduction{
+     text-align: center;
+     width: 1200px;
+     margin: 0 auto;
+}
+.tro{
+    width: 100%;
+    text-align: left;
+    margin-bottom: 10px;
+}
+.tro img{
+    width: 50%;
+    display: block;
+    float: left;
+    height: 450px;
+    border-radius: 15px;
+}
+.tro .txt{
+    width: 49%;
+    height: 450px;
+    display: inline-block;
+    text-align: center;
+}
+.txt p{
+      text-align: left;
+      padding: 20px;
+      font-size: 20px;
+      text-indent: 2em;
+}
+.txt p:nth-child(2){
+    border-bottom: 1px solid #ccc;
+}
+.tro2 img{
+    float:right;
+}

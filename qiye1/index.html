@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <style>
+        #header {
+            background-color: rgb(242, 242, 242);
+            display: flex;
+            align-items: center;
+            height: 60px;
+            justify-content: space-around;
+        }
+
+        .container {
+            font-size: 20px;
+            width: 1200px;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .footer {
+            background-color: skyblue;
+        }
+
+        .contact {
+            padding-top: 40px;
+            width: 1200px;
+            display: flex;
+            margin: 0 auto;
+        }
+
+        .between {
+            justify-content: space-between;
+        }
+
+        .nav {
+            list-style: none;
+        }
+
+        .nav li {
+            float: right;
+            margin-left: 5px;
+        }
+
+        .container {
+            font-size: 20px;
+            width: 1200px;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .con {
+            flex: 1;
+            text-align: center;
+        }
+
+        .con img {
+            margin-bottom: 15px;
+        }
+
+        .s {
+            padding-top: 20px;
+        }
+
+        .l img {
+            width: 200px;
+            height: 200px;
+        }
+
+        .bq {
+            width: 50%;
+            margin: 0 auto;
+            text-align: center;
+            border-top: 1px solid rgb(189, 187, 187);
+            padding: 5px;
+        }
+
+        .list li {
+            border: 1px solid #eee;
+            margin-bottom: 10px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 0;
+        }
+
+        .list li:hover {
+            color: red;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="header">
+        <div class="logo between container">
+            <div class="logo">
+                <img id="img1" src="img/logo.png" style="width: 50px;">
+                <span>极客大叔的网站</span>
+            </div>
+            <ul class="nav">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="news.html">新闻</a></li>
+                <li><a href="about.html">关于我们</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/1.bmp" class="d-block w-100" alt="..." style="width: 100%;height: 500px;">
+            </div>
+            <div class="carousel-item">
+                <img src="img/2.bmp" class="d-block w-100" alt="..." style="width: 100%;height: 500px;">
+            </div>
+            <div class="carousel-item">
+                <img src="img/3.bmp" class="d-block w-100" alt="..." style="width: 100%;height: 500px;">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <div class="service w">
+        <h2>服务范围</h2>
+        <div class="service-content">
+            <ul>
+                <li><img src="img/1.png" alt=""></li>
+                <li><img src="img/2.png" alt=""></li>
+                <li><img src="img/3.png" alt=""></li>
+                <li><img src="img/4.png" alt=""></li>
+            </ul>
+        </div>
+    </div>
+    <!-- introduction -->
+    <div class="introduction w">
+        <h2>介绍</h2>
+        <div class="tro">
+            <img src="img/book1.jpg" alt="">
+            <div class="txt">
+                <h3>我的晃荡的青春</h3>
+                <p>《我的晃荡的青春》是东野圭吾的自传，他讲述了自己的成长经历，令读者大跌眼镜、忍俊不禁。从小学开始，他就从未完整读完一本书；初中时，他没日没夜打麻将；高中时，偷窥女生更衣被抓；高考落榜进复读班后，依旧没心没肺活着。
+                </p>
+                <p>在《我的晃荡的青春》一书里，东野圭吾第真诚讲述了自己独特的成长经历，一改往日华丽的推理天王形象，各种青春经历让人大跌眼镜，忍俊不禁。</p>
+            </div>
+        </div>
+
+        <div class="tro tro2">
+            <div class="txt">
+                <h3>天上的云</h3>
+                <p>《我的晃荡的青春》是东野圭吾的自传，他讲述了自己的成长经历，令读者大跌眼镜、忍俊不禁。从小学开始，他就从未完整读完一本书；初中时，他没日没夜打麻将；高中时，偷窥女生更衣被抓；高考落榜进复读班后，依旧没心没肺活着。
+                </p>
+                <p>在《我的晃荡的青春》一书里，东野圭吾第真诚讲述了自己独特的成长经历，一改往日华丽的推理天王形象，各种青春经历让人大跌眼镜，忍俊不禁。</p>
+            </div>
+            <img src="img/book3.jpg" alt="">
+        </div>
+
+        <div class="tro">
+            <div class="txt">
+                <h3>有匪</h3>
+                <p>“有匪”二字取自《诗经·国风》：“有匪君子，如切如磋，如琢如磨。”“匪”通“斐”，古人用生动的比喻，寓意君子之美在于后天的积学修养、磨砺道德。</p>
+                <p>《有匪》小说讲述了少女周翡与青年谢允砥砺磨难成长为一代英雄的传奇故事：江湖动乱，“南刀”传人周翡奉母亲之命离开生长之地四十八寨下山执行任务，意外与曾夜闯山寨致使她父亲远走他乡的青年谢允再度相遇，两人就此被卷入一场深不可测的江湖纷争中。当尘封了二十年的惊天秘密被一层层逐渐揭开，周翡和谢允也一步步成长为真正的“有匪君子”。
+                </p>
+            </div>
+            <img src="img/book4.jpg" alt="">
+        </div>
+        <h2>新闻</h2>
+        <div class="list" style="display: flex;">
+
+        </div>
+    </div>
+
+    <script>
+
+        let curIdx = Number(window.location.href.split("?page=")[1]) || 1;
+
+        function getUrl(page) {
+            window.location.href = `?page=${page}`
+        }
+
+        printPage(curIdx)
+
+        function printPage(page) {
+            curIdx = page;
+            axios.get("https://www.fastmock.site/mock/9cf4cc6f5b20a97cd8173a4a5832e15b/train/news?page=" + page).then(function (res) {
+                console.log(res.data);
+                $('.list').empty();
+                for (let i = 0; i < 3; i++) {
+                    let li = $("<li></li>");
+                    li.append(`<img src="${res.data.data.list[i].img}" alt="" style="width: 300px;height: 200px;">`);
+                    li.append(`<p style="font-weight: bold;">${res.data.data.list[i].title}</p>`);
+                    li.append(`<p style="color:darkgrey; font-size: 10px; margin: auto;">${res.data.data.list[i].time}</p>`);
+                    /* li.append(`<p style="font-size: 13px;">${res.data.data.list[i].content}</p>`); */
+                    li.attr('id', res.data.data.list[i].id)
+                    $(".list").append(li);
+
+                    $('.list li').click(function () {
+                        window.location.href = `news-detail.html?id=${$(this).attr('id')}`
+                    })
+                }
+            })
+
+        }
+    </script>
+
+
+
+
+    <div class="footer">
+        <div class="contact">
+            <div class="con s">
+                <img src="img/footer-icon.png" alt="">
+                <p>福州市闽江学院</p>
+            </div>
+            <div class="con s">
+                <img src="img/footer-icon2.png" alt="">
+                <p>1922890392@qq.com</p>
+            </div>
+            <div class="con s">
+                <img src="img/footer-icon3.png" alt="">
+                <p>19959371596</p>
+            </div>
+            <div class="con l s">
+                <img src="img/ewm.jpg" alt="">
+                <p>扫一扫</p>
+            </div>
+        </div>
+        <p class="bq">
+            版权所有@
+        </p>
+    </div>
+</body>
+
+</html>

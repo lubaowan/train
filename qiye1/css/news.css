@@ -1,0 +1,29 @@
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+.nav li {
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+}
+
+.list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0;
+}
+
+.list li {
+    border: 1px solid #eee;
+    margin-bottom: 10px;
+    padding: 10px;
+    text-align: center;
+}
+.list li:hover{
+    color: red;
+    border: 1px solid red;
+}
