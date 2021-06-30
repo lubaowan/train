@@ -1,6 +1,6 @@
 .service{
     text-align: center;
-    width: 1200px;
+    width: 80%;
     margin: 0 auto;
 }
 .aside{
@@ -29,13 +29,13 @@
 }
 .service-content{
     background-color: skyblue;
-    height: 300px;
+/*     height: 300px; */
     font-size: 30px;
 }
 .service-content ul{
      
      display: flex;
-     height: 300px;
+     height: 10rem;
      align-items: center;
      list-style: none;
     
@@ -43,11 +43,13 @@
 .service-content li{
     flex: 1;
 }
-
+.fuwu{
+    width: 50%;
+}
 /* introduction */
 .introduction{
      text-align: center;
-     width: 1200px;
+     width: 80%;
      margin: 0 auto;
 }
 .tro{
@@ -56,14 +58,14 @@
     margin-bottom: 10px;
 }
 .tro img{
-    width: 50%;
+/*     width: 50%; */
     display: block;
     float: left;
     height: 450px;
     border-radius: 15px;
 }
 .tro .txt{
-    width: 49%;
+ /*    width: 49%; */
     height: 450px;
     display: inline-block;
     text-align: center;

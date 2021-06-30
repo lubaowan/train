@@ -7,9 +7,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="css/1.css">
+    <script>
+        $(function () {
+            $('#lists').removeClass('list-mobile')
+            $('#menus').click(function () {
+                if ($('#lists').hasClass('list-mobile')) {
+                    $('#lists').removeClass('list-mobile')
+                } else {
+                    $('#lists').addClass('list-mobile')
+                }
+            })
+        })
+    </script>
     <style>
         #header {
             background-color: rgb(242, 242, 242);
@@ -21,7 +36,7 @@
 
         .container {
             font-size: 20px;
-            width: 1200px;
+            width: 80%;
             text-align: center;
             margin: 0 auto;
         }
@@ -32,7 +47,7 @@
 
         .contact {
             padding-top: 40px;
-            width: 1200px;
+            width: 80%;
             display: flex;
             margin: 0 auto;
         }
@@ -52,7 +67,7 @@
 
         .container {
             font-size: 20px;
-            width: 1200px;
+            width: 80%;
             text-align: center;
             margin: 0 auto;
         }
@@ -92,19 +107,25 @@
 
 <body>
 
-    <div id="header">
-        <div class="logo between container">
-            <div class="logo">
-                <img id="img1" src="img/logo.png" style="width: 50px;">
-                <span>极客大叔的网站</span>
+    <div class="box">
+        <div class="navs navbars">
+            <div class="navbar-box container">
+                <div class="logo">
+                    <img id="img1" src="img/logo.png">
+                    <span>极客大叔的网站</span>
+                </div>
+                <div id='menus' class="menu">菜单</div>
+
+                <div id="lists" class="list1 list-mobile">
+                    <a href="index.html">首页</a>&nbsp;&nbsp;&nbsp;
+                    <a href="news.html">新闻</a>&nbsp;&nbsp;&nbsp;
+                    <a href="about.html">关于我们</a>&nbsp;&nbsp;&nbsp;
+                    <a href="/train/1.html">个人展示页</a>&nbsp;&nbsp;&nbsp;
+                </div>
             </div>
-            <ul class="nav">
-                <li><a href="index.html">首页</a></li>
-                <li><a href="news.html">新闻</a></li>
-                <li><a href="about.html">关于我们</a></li>
-            </ul>
         </div>
     </div>
+
 
     <div id='main' class="container">
 
@@ -113,7 +134,7 @@
         /* alert(window.location.search.split('=')[1]); */
         var idx = window.location.search.split('=')[1];
         /* axios.get(`https://www.fastmock.site/mock/9ebe3a368a27679abbcec28818a46c73/api/api/${window.location.search.split('=')[1]}`).then(function(res) { */
-        axios.get(`https://www.fastmock.site/mock/9cf4cc6f5b20a97cd8173a4a5832e15b/train/news`).then(function(res) {
+        axios.get(`https://www.fastmock.site/mock/9cf4cc6f5b20a97cd8173a4a5832e15b/train/news`).then(function (res) {
             console.log(res.data);
             /*  let title = $(`<h1>${res.data.name}</h1>`);
              $('#div').append(title); */
@@ -121,31 +142,31 @@
             let title = $(`<h1>${res.data.data.news[idx].title}</h1>`);
             main.append(title);
             main.append(`<p style="color:darkgrey; font-size: 10px; margin: auto;">${res.data.data.news[idx].time}</p>`);
-            main.append(`<img src="${res.data.data.news[idx].img}" alt="">`);
+            main.append(`<img src="${res.data.data.news[idx].img}" alt="" style ='width:80%'>`);
             main.append(`<p style="font-size: 15px;">${res.data.data.news[idx].content}</p>`);
         })
     </script>
 
 
     <div class="footer">
-        <div class="contact">
-            <div class="con s">
+        <ul class="row" style="padding: 20px;">
+            <li class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                 <img src="img/footer-icon.png" alt="">
                 <p>福州市闽江学院</p>
-            </div>
-            <div class="con s">
+            </li>
+            <li class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                 <img src="img/footer-icon2.png" alt="">
                 <p>1922890392@qq.com</p>
-            </div>
-            <div class="con s">
+            </li>
+            <li class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                 <img src="img/footer-icon3.png" alt="">
                 <p>19959371596</p>
-            </div>
-            <div class="con l s">
-                <img src="img/ewm.jpg" alt="">
+            </li>
+            <li class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <img src="img/ewm.jpg" alt="" width="200px">
                 <p>扫一扫</p>
-            </div>
-        </div>
+            </li>
+        </ul>
         <p class="bq">
             版权所有@
         </p>
