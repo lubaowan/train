@@ -75,6 +75,135 @@
     padding: 5px;
 }
 
+.list li {
+    border: 1px solid #eee;
+    margin-bottom: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0;
+}
+
+.list li:hover {
+    color: red;
+    border: 1px solid red;
+    }
+#content ul li{
+    list-style: none;
+/*     width: 300px; */
+    margin: 0 auto;
+}
+
+li {
+    list-style-type: none;
+    padding: 0px;
+    flex-direction: column;
+    align-items: center;
+    display: flex !important;
+}
+#content ul img{
+    width: 75%;
+}
+h3{
+    text-align: center;
+}
+@media screen and (max-width:720px) {
+    .navbars .navbar-box .list {
+        display: none;
+    }
+    .navbars .navbar-box .menu {
+        display: block;
+    }
+    .list-mobile {
+        width: 100%;
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+#header {
+    background-color: rgb(242, 242, 242);
+    display: flex;
+    align-items: center;
+    height: 60px;
+    justify-content: space-around;
+}
+
+.container {
+    font-size: 20px;
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.footer {
+    background-color: skyblue;
+}
+
+.contact {
+    padding-top: 40px;
+    width: 80%;
+    display: flex;
+    margin: 0 auto;
+}
+
+.between {
+    justify-content: space-between;
+}
+
+.nav {
+    list-style: none;
+}
+
+.nav li {
+    float: right;
+    margin-left: 5px;
+}
+
+.container {
+    font-size: 20px;
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.con {
+    flex: 1;
+    text-align: center;
+}
+
+.con img {
+    margin-bottom: 15px;
+}
+
+.s {
+    padding-top: 20px;
+}
+
+.l img {
+    width: 200px;
+    height: 200px;
+}
+
+.bq {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    border-top: 1px solid rgb(189, 187, 187);
+    padding: 5px;
+}
+
 .list1 li {
     border: 1px solid #eee;
     margin-bottom: 10px;
@@ -94,7 +223,7 @@
     color: red;
     border: 1px solid red;
     }
-#content ul li{
+/* #content ul li{
     list-style: none;
     width: 300px;
     margin: 0 auto;
@@ -109,7 +238,7 @@ li {
 }
 #content ul img{
     width: 250px;
-}
+} */
 h3{
     text-align: center;
 }
@@ -142,12 +271,12 @@ h3{
     width: 40px;
 }
 
-ul,
+/* ul,
 li {
     list-style-type: none;
     padding: 0px;
 }
-
+ */
 a {
     color: #fff;
     text-decoration: none;
