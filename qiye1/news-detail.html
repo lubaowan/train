@@ -143,7 +143,7 @@
             let title = $(`<h1>${res.data.data.news[idx].title}</h1>`);
             main.append(title);
             main.append(`<p style="color:darkgrey; font-size: 10px; margin: auto;">${res.data.data.news[idx].time}</p>`);
-            main.append(`<img data-src="${res.data.data.news[idx].img}" alt="" style ='width:80%' class="lazyload">`);
+            main.append(`<img data-src="${res.data.data.news[idx].img}" alt="" style ='width:100%' class="lazyload">`);
             main.append(`<p style="font-size: 15px;">${res.data.data.news[idx].content}</p>`);
         })
     </script>
