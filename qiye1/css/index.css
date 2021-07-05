@@ -82,3 +82,9 @@
 .tro2 img{
     float:right;
 }
+
+@media screen and (max-width:600px){
+    .a{
+        width: 100%;
+    }
+}
