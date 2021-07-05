@@ -13,6 +13,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         crossorigin="anonymous"></script>
         <link rel="stylesheet" href="css/1.css">
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <style>
         #header {
             background-color: rgb(242, 242, 242);
@@ -203,7 +204,7 @@
                 <img data-src="img/footer-icon3.png" alt=""class="lazyload">
                 <p>19959371596</p>
             </li>
-            <li class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <li class="col-lg-3 col-md-4 col-sm-6 col-xs-12" id="feedback">
                 <img data-src="img/ewm.jpg" alt="" width="200px"class="lazyload">
                 <p>扫一扫</p>
             </li>
@@ -212,6 +213,33 @@
             版权所有@
         </p>
     </div>
+    <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">联系我们</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <label for="exampleFormControlInput1" class="form-label">联系方式</label>
+                  <input type="email" class="form-control" id="emailInput" placeholder="name@example.com">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleFormControlTextarea1" class="form-label">想说的话</label>
+                  <textarea class="form-control" id="messageInput" rows="3"></textarea>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button id="closeBtn" type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
+              <button id="submitBtn" type="button" class="btn btn-primary">提交</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
 </body>
 
 </html>
@@ -234,8 +262,6 @@
     marker.addEventListener("click", function () {
         map.openInfoWindow(infoWindow, point); //开启信息窗口
     });
-</script>
-<script>
     $(function () {
         $('#lists').removeClass('list-mobile')
         $('#menus').click(function () {
@@ -245,5 +271,33 @@
                 $('#lists').addClass('list-mobile')
             }
         })
+    })
+    $(function () {
+      var myModal = new bootstrap.Modal(document.getElementById('exampleModal'))
+
+      $('#feedback').click(function () {
+        myModal.show();
+      })
+      $('#closeBtn').click(function () {
+        myModal.hide();
+      })
+      $('#submitBtn').click(function () {
+        let email = $('emailInput').val();
+        let message = $('messageInput').val();
+        console.log('email');
+        axios({
+          url: 'https://rpthqmyc.lc-cn-n1-shared.com/1.1/classes/data',
+          method: 'post',
+          headers: {
+            'X-LC-Id': 'RpThQMycsXA3ejXhR3MKixmp-gzGzoHsz',
+            'X-LC-Key': "BJrbO4oYNy85ymYKBTuawJoO"
+          },
+          data: {
+            email: email,
+            message: message
+          }
+        })
+        myModal.hide();
+      })
     })
 </script>
