@@ -36,8 +36,8 @@
         myModal.hide();
       })
       $('#submitBtn').click(function () {
-        let email = $('emailInput').val();
-        let message = $('messageInput').val();
+        let email = $('#emailInput').val();
+        let message = $('#messageInput').val();
         console.log('email',email,message);
         axios({
           url: 'https://rpthqmyc.lc-cn-n1-shared.com/1.1/classes/data',
